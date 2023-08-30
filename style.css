@@ -1,0 +1,117 @@
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Dark-dark-cyan: hsl(158, 36%,20%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    --ff-accent: 'Fraunces', serif;
+    --ff-base: 'Montserrat', sans-serif;
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+}
+
+
+/*Estilos generales*/
+body {
+    background-color: var(--Cream);
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-size: 0.875rem;
+    color: var(--Dark-grayish-blue);
+
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+    margin: 1rem;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  /* Utilidades*/
+  .flex-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  /*Estilos*/
+  .product {
+    --content-padding: 1.5rem;
+    --content-spacing: 1rem;
+  
+    display: grid;
+    background-color: var(--White);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 600px; 
+  }
+
+  @media (min-width: 600px) {
+    .product {
+        --content-padding: 1.5rem;
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .product-content {
+   padding: var(--content-padding);
+   display: grid;
+   
+  }
+
+  .product-category {
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    font-size: 0.75rem;
+    
+  }
+
+  h1 {
+    font-family: var(--ff-accent);
+    color: var(--Very-dark-blue);
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  .product-price {
+    font-family: var(--ff-accent);
+    font-size: 2rem;
+    color: var(--Dark-cyan);
+  }
+
+  .original-price {
+    text-decoration: line-through;
+
+  }
+
+  .button {
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    border: 0;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    display: inline-flex;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75em 1.5em;
+    font-size: 0.9rem;
+    font-weight: var(--fw-bold);
+    cursor: pointer;
+  }
+
+  .button:is(:hover, :focus) {
+    background-color: var(--Dark-dark-cyan);
+  }
